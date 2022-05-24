@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import ContainerPage from './component/ContainerPage/ContainerPage';
+// import SectionContent from './component/Content/Content';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container maxWidth="sx" style={{ paddingLeft: '0px', paddingRight: '0px' }}>
+        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh', display: 'flex' }}>
+          <ContainerPage></ContainerPage>
+        </Box>
+      </Container>
     </div>
   );
 }

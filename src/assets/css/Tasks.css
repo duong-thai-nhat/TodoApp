@@ -1,0 +1,19 @@
+.content__box {
+
+}
+
+.content__box .content__box__wrap__column{
+    width: 330px;
+    margin: 0 6px;
+    padding: 20px 4px 0;
+    box-shadow: 0px 1px 3px rgb(16 24 40 / 30%);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    /* border-radius: 10px; */
+}
+
+.content__box .smooth-dnd-container.horizontal{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,133 @@
+.card__item{
+    margin-bottom: 24px;
+}
+
+.card__item > .MuiPaper-root {
+    background: #FCFCFD;
+    box-shadow: 0px 0.5px 2px rgba(16, 24, 40, 0.3);
+    border-radius: 8px;
+    color: #98A2B3;
+    max-width: unset;
+}
+
+
+.card__item .MuiCardContent-root,
+.card__item .css-46bh2p-MuiCardContent-root:last-child,
+.card__item .MuiCardHeader-root{
+    padding: 0;
+}
+
+.card__item .MuiCardHeader-content .MuiTypography-root{
+    font-size: 20px;
+    color: #1D2939;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.card__item__subheader{
+    margin-top: 6px;
+    font-size: 14px;
+    color: #98A2B3;
+}
+
+.card__item .card__item__subheader__weight{
+    color: #1D2939
+}
+
+.card__item .BaseBadge-root span{
+    width: 4px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #C4C4C4;
+}
+
+.card__item .card__item__body{
+    margin: 16px 0;
+}
+
+.card__item .card__item__body__media{
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card__item .card__item__body__tag{
+    margin: 16px 0;
+}
+
+.card__item .card__item__tag__link{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.card__item .card__item__tag__link + .card__item__tag__link{
+    padding-left: 18px;
+}
+
+.card__item .card__item__tag__link p{
+    color: #98A2B3;
+}
+
+.card__item .card__item__body__param{
+    line-height: 23px;
+    margin-bottom: 12px;
+    color: #98A2B3;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.card__item .card__item__body__linkicon{
+    transform: translateY(10px);
+    color: #98A2B3;
+}
+
+.card__item .card__item__body__linkicon path{
+    transform: scale(80%);
+}
+
+.card__item .card__item__fab{
+    border-radius: 6px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 14px;
+    box-shadow: unset;
+}
+
+.card__item .card__item__fab + .card__item__fab{
+    margin-left: 8px;
+}
+
+.card__item .card__item__fab:nth-child(n + 1){
+    color: #475467;
+    background: #F2F4F7;
+}
+
+.card__item .card__item__fab:nth-child(n + 2){
+    color: #12B76A;
+    background: #D1FADF;
+}
+
+.card__item .card__item__boxchat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.card__item .card__item__boxchat__badge{
+    position: relative;
+    display: flex;
+}
+
+.card__item .card__item__boxchat__badge .BaseBadge-badge{
+    background-color: unset;
+    transform: unset;
+    margin-left: 11px;
+}
+
+.card__item .card__item__boxchat__avatar{
+    width: 24px;
+    height: 24px;
+}

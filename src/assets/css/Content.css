@@ -1,0 +1,23 @@
+.content{
+    flex: 1;
+    background-color: #F2F4F7;
+    min-height: 100vh;
+}
+
+.content .MuiBox-root.content__box{
+    background-color: unset;
+    padding: 80px 52px;
+}
+
+.content .MuiBox-root.content__box > .MuiGrid-container > .MuiGrid-item{
+    min-width: 350px;
+}
+
+.content .content__box__card__header{
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

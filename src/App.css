@@ -1,5 +1,11 @@
 .App {
-  text-align: center;
+  max-width: 1512px;
+  margin: 0 auto;
+}
+
+.App .css-hd7k02{
+    background-color: #fff;
+    display: block;
 }
 
 .App-logo {

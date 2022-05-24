@@ -1,0 +1,79 @@
+.sidebar{
+    width: 21.16%;
+    padding: 24px;
+    min-width: 320px;
+}
+
+.sidebar .sidebar__wrap{
+    height: 100%;
+}
+
+.sidebar .sidebar__wrap .MuiPaper-root{
+    justify-content: space-between;
+}
+
+.sidebar .sidebar__name__expand{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.sidebar .sidebar__name__company span{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.sidebar .sidebar__collapse__nav ul.MuiList-root{
+    padding: 0;
+}
+
+.sidebar .css-1f2xuhi-MuiDrawer-docked,
+.sidebar .css-1f2xuhi-MuiDrawer-docked .MuiDrawer-paper{
+    width: unset;
+}
+
+.sidebar .css-cveggr-MuiListItemIcon-root{
+    min-width: unset;
+    margin-right: 8px;
+}
+
+.sidebar .css-1f2xuhi-MuiDrawer-docked .MuiDrawer-paper{
+    position: unset;
+    border-right: unset;
+}
+
+.sidebar .MuiListItemButton-root{
+    padding: 12px 8px 12px 6px;
+}
+
+.sidebar .css-cveggr-MuiListItemIcon-root,
+.sidebar .MuiListItemText-root .MuiTypography-root{
+    color: #667085;
+}
+
+.sidebar .sidebar__noti{
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 2.5px 6.5px;
+    background: #F2F4F7;
+    color: #344054;
+}
+
+.sidebar .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root.Mui-selected{
+    background: #F2F4F7;
+    border-radius: 6px;
+}
+
+.sidebar .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root.Mui-selected .css-cveggr-MuiListItemIcon-root,
+.sidebar .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root.Mui-selected .MuiListItemText-root .MuiTypography-root{
+    color: #1D2939;
+}
+
+.sidebar .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root.Mui-selected .sidebar__noti{
+    color: #fff;
+    background: #1D2939;
+}
+
+.sidebar .sidebar__setting{
+    padding: 0;
+}
