@@ -13,8 +13,6 @@ import { styled } from '@mui/material/styles';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-
-// import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -28,6 +26,8 @@ import Card1 from '../../assets/img/itemcard1.jpg';
 
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+
+import '../../assets/css/modalAdd.css';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -44,9 +44,10 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: 'background.paper',
-  border: '2px solid #000',
+  // border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  borderRadius: '20px',
 };
 
 export default function ModalAdd() {
@@ -114,7 +115,7 @@ export default function ModalAdd() {
   }
 
   return (
-    <div>
+    <div className='modal__add'>
       <IconButton onClick={handleOpen} aria-label="add" size="small">
         <AddIcon fontSize="inherit" />
       </IconButton>
@@ -159,7 +160,7 @@ export default function ModalAdd() {
                   <option value={'Done'}>Done</option>
                 </NativeSelect>
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={6} className='modal__add__Wrap__datepicker'>
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
                   <DatePicker
                     label="Date"

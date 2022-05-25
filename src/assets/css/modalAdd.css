@@ -1,0 +1,16 @@
+.modal__add__Wrap__datepicker{
+    display: flex;
+    /* align-items: center; */
+}
+
+.modal__add__Wrap__datepicker .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root{
+    font-size: 20px;
+}
+
+.modal__add__Wrap__datepicker .css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+    margin-top: 10px;
+}
+
+.modal__add__Wrap__datepicker .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input{
+    padding: 12px 14px;
+}
