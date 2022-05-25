@@ -8,6 +8,8 @@ import Modal from '@mui/material/Modal';
 import NativeSelect from '@mui/material/NativeSelect';
 import InputLabel from '@mui/material/InputLabel';
 
+import { styled } from '@mui/material/styles';
+
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
@@ -23,6 +25,17 @@ import AddIcon from '@mui/icons-material/Add';
 import CloseIcon from '@mui/icons-material/Close';
 
 import Card1 from '../../assets/img/itemcard1.jpg';
+
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
 const style = {
   position: 'absolute',
@@ -128,7 +141,42 @@ export default function ModalAdd() {
             </IconButton> */}
           </Box>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <InputLabel fullWidth id="demo-simple-select-label">Type</InputLabel>
+            <Grid container>
+              <Grid item xs={6} sx={{ pr: 2 }}>
+                <InputLabel fullWidth id="demo-simple-select-label">Type</InputLabel>
+                <NativeSelect
+                  onChange={handleOnChangeType}
+                  fullWidth
+                  defaultValue={'To do'}
+                  inputProps={{
+                    name: 'name',
+                    id: 'uncontrolled-native',
+                  }}
+                  sx={{ mb: 4 }}
+                >
+                  <option value={'To do'}>To Do</option>
+                  <option value={'Doing'}>Doing</option>
+                  <option value={'Done'}>Done</option>
+                </NativeSelect>
+              </Grid>
+              <Grid item xs={6}>
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                  <DatePicker
+                    label="Date"
+                    value={value}
+                    onChange={(newValue) => {
+                      setValue(newValue)
+                      const months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"];
+                      let time = new Date(newValue)
+                      console.log(`${time.getDate()}th ${months[time.getMonth()]}`)
+                      setDataForm({...dataForm, propsAdd:{...dataForm.propsAdd ,date: `${time.getDate()}th ${months[time.getMonth()]}`}})
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
+              </Grid>
+            </Grid>
+            {/* <InputLabel fullWidth id="demo-simple-select-label">Type</InputLabel>
             <NativeSelect
               onChange={handleOnChangeType}
               fullWidth
@@ -142,10 +190,10 @@ export default function ModalAdd() {
               <option value={'To do'}>To Do</option>
               <option value={'Doing'}>Doing</option>
               <option value={'Done'}>Done</option>
-            </NativeSelect>
-            <TextField sx={{ mb: 4, mt: -3 }} onChange={handleOnChange} fullWidth id="headercard-input" name='name' label="Headercard" variant="standard" />
+            </NativeSelect> */}
+            <TextField sx={{ mt: -3 }} onChange={handleOnChange} fullWidth id="headercard-input" name='name' label="Headercard" variant="standard" />
 
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
+            {/* <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DatePicker
                 label="Date"
                 value={value}
@@ -158,7 +206,7 @@ export default function ModalAdd() {
                 }}
                 renderInput={(params) => <TextField {...params} />}
               />
-            </LocalizationProvider>
+            </LocalizationProvider> */}
             <TextField sx={{ mt:2 }} onChange={handleOnChange} fullWidth id="author-input" name='author' label="Author" variant="standard" />
             <TextField sx={{ mt:2 }} onChange={handleOnChange} fullWidth id="param-input" name='param' label="Param" variant="standard" />
             <TextField sx={{ mt:4 }} fullWidth onChange={handleImg} name='img' type='file' id="param-input" variant="standard" />
