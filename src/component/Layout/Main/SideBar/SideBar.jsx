@@ -23,7 +23,7 @@ import {  GridView as GridViewIcon,
           Send as SendIcon,
         } from '@mui/icons-material';
 
-import '../../assets/css/SideBar.css'
+import '../../../../assets/css/SideBar.css'
 
 const drawerWidth = 240;
 

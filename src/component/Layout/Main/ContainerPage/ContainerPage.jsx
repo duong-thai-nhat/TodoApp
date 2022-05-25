@@ -1,7 +1,7 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import SideBar from '../SideBar/SideBar';
-import SectionContent from '../Content/Content';
+import SectionContent from '../Route/Content';
 
 function ContainerPage() {
   return (

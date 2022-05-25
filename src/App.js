@@ -1,6 +1,5 @@
 import './App.css';
-import ContainerPage from './component/ContainerPage/ContainerPage';
-// import SectionContent from './component/Content/Content';
+import ContainerPage from './component/Layout/Main/ContainerPage/ContainerPage';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 

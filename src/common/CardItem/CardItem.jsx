@@ -13,35 +13,17 @@ import Fab from '@mui/material/Fab';
 import Link from '@mui/material/Link';
 import LinkIcon from '@mui/icons-material/Link';
 import ChatIcon from '@mui/icons-material/Chat';
-import DeleteIcon from '@mui/icons-material/Delete';
-import IconButton from '@mui/material/IconButton';
 
-import ModalDelete from '../../common/Modals/modalDelete'
+import ModalDelete from '../../common/Modals/modalDelete';
 
-import { deleteTask } from '../../redux/actions/tasks';
-
-import { useDispatch } from 'react-redux';
-
-import '../../assets/css/CardItem.css'
-// import MailIcon from '@mui/icons-material/Mail';
-
+import '../../assets/css/CardItem.css';
 
 function CardItem({ id, name, date, author, param, img, linkGoogle, linkPsd, arrayFab, mountMes, arrayAvatar, idColumn}) {
-
-    const dispatch = useDispatch();
-
-    const DeleteItem = (id, idColumn) => {
-        const action = deleteTask(id, idColumn);
-        dispatch(action);
-    }
 
   return (
     <div className="card__item">
         <Card sx={{ maxWidth: 345, padding: '20px' }}>
             <Box sx={{ textAlign: 'right' }}>
-                {/* <IconButton onClick={() => {DeleteItem(id, idColumn)}} aria-label="delete" size="small">
-                    <DeleteIcon fontSize="inherit"/>
-                </IconButton> */}
                 <ModalDelete id={id} idColumn={idColumn}/>
             </Box>
             <CardContent>

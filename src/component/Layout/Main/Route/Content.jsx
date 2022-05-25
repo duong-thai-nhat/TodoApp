@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import '../../assets/css/Content.css';
-import Tasks from '../Tasks/Tasks';
-import Notifications from '../Notifications/Notifications';
-import Analytics from '../Analytics/Analytics';
-import Team from '../Team/Team';
+import '../../../../assets/css/Content.css';
+import Tasks from '../../../../Pages/Tasks/Tasks';
+import Notifications from '../../../../Pages/Notifications/Notifications';
+import Analytics from '../../../../Pages/Analytics/Analytics';
+import Team from '../../../../Pages/Team/Team';
 
 function SectionContent() {
   return (

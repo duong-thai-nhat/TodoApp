@@ -2,6 +2,8 @@ import itemcard2 from '../../assets/img/itemcard1.jpg'
 import Avatar1 from '../../assets/img/Avatar/avatar1.jpg'
 import Avatar2 from '../../assets/img/Avatar/avatar2.jpg'
 
+import { ADD__TASK, DRAG__AND__DROP, DELETE__TASK } from '../constant'
+
 const initialState = {
     data: [
         {
@@ -100,7 +102,7 @@ const initialState = {
 
 const tasksReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD__TASK':{
+        case ADD__TASK:{
           const id = Math.floor(Math.random() * 10000);
           const newData = [...state.data]
           console.log(newData)
@@ -118,7 +120,7 @@ const tasksReducer = (state = initialState, action) => {
           };
         }
         
-        case 'DELETE__TASK': {
+        case DELETE__TASK: {
           const newData = [ ...state.data ]
           for(let i = 0; i < newData.length; i++){
             console.log(newData[i].id,action.payload.idColumn)
@@ -140,7 +142,7 @@ const tasksReducer = (state = initialState, action) => {
           }
         }
 
-        case 'DRAG__AND__DROP':{
+        case DRAG__AND__DROP:{
           const newData = [ ...action.payload ]
           return {
             ...state,

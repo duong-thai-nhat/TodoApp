@@ -29,14 +29,6 @@ import Grid from '@mui/material/Grid';
 
 import '../../assets/css/modalAdd.css';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
-
 const style = {
   position: 'absolute',
   top: '50%',
@@ -44,7 +36,6 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: 'background.paper',
-  // border: '2px solid #000',
   boxShadow: 24,
   p: 4,
   borderRadius: '20px',
@@ -137,9 +128,6 @@ export default function ModalAdd() {
             <Typography variant="h4">
               Create new card
             </Typography>
-            {/* <IconButton onClick={handleClose} aria-label="close" size="small">
-              <CloseIcon/>
-            </IconButton> */}
           </Box>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             <Grid container>
@@ -177,44 +165,12 @@ export default function ModalAdd() {
                 </LocalizationProvider>
               </Grid>
             </Grid>
-            {/* <InputLabel fullWidth id="demo-simple-select-label">Type</InputLabel>
-            <NativeSelect
-              onChange={handleOnChangeType}
-              fullWidth
-              defaultValue={'To do'}
-              inputProps={{
-                name: 'name',
-                id: 'uncontrolled-native',
-              }}
-              sx={{ mb: 4 }}
-            >
-              <option value={'To do'}>To Do</option>
-              <option value={'Doing'}>Doing</option>
-              <option value={'Done'}>Done</option>
-            </NativeSelect> */}
             <TextField sx={{ mt: -3 }} onChange={handleOnChange} fullWidth id="headercard-input" name='name' label="Headercard" variant="standard" />
-
-            {/* <LocalizationProvider dateAdapter={AdapterDateFns}>
-              <DatePicker
-                label="Date"
-                value={value}
-                onChange={(newValue) => {
-                  setValue(newValue)
-                  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-                  let time = new Date(newValue)
-                  console.log(`${time.getDate()}th ${months[time.getMonth()]}`)
-                  setDataForm({...dataForm, propsAdd:{...dataForm.propsAdd ,date: `${time.getDate()}th ${months[time.getMonth()]}`}})
-                }}
-                renderInput={(params) => <TextField {...params} />}
-              />
-            </LocalizationProvider> */}
             <TextField sx={{ mt:2 }} onChange={handleOnChange} fullWidth id="author-input" name='author' label="Author" variant="standard" />
             <TextField sx={{ mt:2 }} onChange={handleOnChange} fullWidth id="param-input" name='param' label="Param" variant="standard" />
             <TextField sx={{ mt:4 }} fullWidth onChange={handleImg} name='img' type='file' id="param-input" variant="standard" />
             <TextField fullWidth sx={{ mt:2 }} onChange={handleOnChange} id="img-input" name='linkGoogle' label="linkGoogle" variant="standard" />
             <TextField fullWidth sx={{ mt:2 }} onChange={handleOnChange} id="img-input" name='linkPsd' label="linkPsd" variant="standard" />
-            {/* <TextField fullWidth id="fab-input" name='fab' label="Fab" variant="standard" /> */}
-            {/* <TextField fullWidth onChange={handleOnChange} id="mount-input" name='mountMes' label="Mount" variant="standard" /> */}
 
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2, textAlign: 'right' }}>
@@ -223,7 +179,6 @@ export default function ModalAdd() {
               type="submit"
               variant="contained"
               color="primary"
-              // className={class}
               onClick={handleClose}
               sx={{ mr: 2 }}
             >
@@ -234,7 +189,6 @@ export default function ModalAdd() {
               type="submit"
               variant="contained"
               color="primary"
-              // className={class}
               onClick={handleAdd}
             >
               Add
