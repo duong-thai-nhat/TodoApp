@@ -11,6 +11,28 @@
     margin-top: 10px;
 }
 
+.modal__add__Wrap__datepicker .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.42);
+}
+
+.modal__add__choose__file.css-19nt6fm-MuiGrid-root{
+    display: flex;
+    align-items: center;
+}
+
+.modal__add__choose__file .css-12r883s-MuiFormControl-root-MuiTextField-root{
+    margin-top: 0;
+}
+
 .modal__add__Wrap__datepicker .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input{
     padding: 12px 14px;
+}
+
+.modal__add__wrap__img{
+    width: 200px;
+}
+
+.modal__add__wrap__img img{
+    width: 100%;
 }

@@ -91,6 +91,7 @@ export default function ModalAdd() {
 
     fReader.onload = function(){
       if(fReader.readyState === 2){
+        setImg(fReader.result)
         setDataForm({...dataForm, propsAdd:{...dataForm.propsAdd ,img: fReader.result}})
       }
     }
@@ -160,7 +161,7 @@ export default function ModalAdd() {
                       console.log(`${time.getDate()}th ${months[time.getMonth()]}`)
                       setDataForm({...dataForm, propsAdd:{...dataForm.propsAdd ,date: `${time.getDate()}th ${months[time.getMonth()]}`}})
                     }}
-                    renderInput={(params) => <TextField {...params} />}
+                    renderInput={(params) => <TextField {...params}/>}
                   />
                 </LocalizationProvider>
               </Grid>
@@ -168,7 +169,16 @@ export default function ModalAdd() {
             <TextField sx={{ mt: -3 }} onChange={handleOnChange} fullWidth id="headercard-input" name='name' label="Headercard" variant="standard" />
             <TextField sx={{ mt:2 }} onChange={handleOnChange} fullWidth id="author-input" name='author' label="Author" variant="standard" />
             <TextField sx={{ mt:2 }} onChange={handleOnChange} fullWidth id="param-input" name='param' label="Param" variant="standard" />
-            <TextField sx={{ mt:4 }} fullWidth onChange={handleImg} name='img' type='file' id="param-input" variant="standard" />
+            <Grid container sx={{ mt:3, mb: -1 }} style={{ display: 'flex', alignItems: 'center' }}>
+              <Grid item className='modal__add__choose__file' xs={6} sx={{ pr: 2 }}>
+                <TextField sx={{ mt:4 }} fullWidth onChange={handleImg} name='img' type='file' id="param-input" variant="standard" />
+              </Grid>
+              <Grid item xs={6} sx={{ pr: 2 }}>
+                <div className='modal__add__wrap__img'>
+                  <img src={img}></img>
+                </div>
+              </Grid>
+            </Grid>
             <TextField fullWidth sx={{ mt:2 }} onChange={handleOnChange} id="img-input" name='linkGoogle' label="linkGoogle" variant="standard" />
             <TextField fullWidth sx={{ mt:2 }} onChange={handleOnChange} id="img-input" name='linkPsd' label="linkPsd" variant="standard" />
 
